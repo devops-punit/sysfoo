@@ -4,4 +4,4 @@ services:
   sysfoo:
     image: puchandr05/sysfoo:latest
     ports:
-      - 8883:8080
+      - 8888:8080
