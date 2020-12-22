@@ -43,7 +43,7 @@ pipeline {
 
     stage('Docker Build and Publish') {
       when {
-                branch 'master'
+        branch 'master'
       }
       steps {
         script {
@@ -59,6 +59,13 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('Deploy Dev') {
+      agent any
+      steps {
+        sh 'docker-compose up'
       }
     }
 
